@@ -31,56 +31,36 @@ A empresa **Logística Eficiente S.A.** precisa otimizar sua gestão de estoque 
         
 -   **Ferramentas:** Pandas, Matplotlib/Seaborn, Jupyter Notebooks.
   - **Exemplo de Código:**
-  ```` python 
+  ```` python
+
   import pandas as pd
-
 import matplotlib.pyplot as plt
-
 import seaborn as sns
 
-  
-
 # Carregar dados
-
 df = pd.read_csv('vendas_produto_alfa.csv', parse_dates=['data'])
 
-  
-
 # Estatísticas básicas
-
 print(df.describe())
 
-  
-
 # Vendas ao longo do tempo
-
 plt.figure(figsize=(12,6))
-
 sns.lineplot(data=df, x='data', y='vendas')
-
 plt.title('Vendas do Produto Alfa ao longo do tempo')
-
 plt.show()
-
-  
 
 # Impacto de promoções
-
 sns.boxplot(x='em_promocao', y='vendas', data=df)
-
 plt.title('Impacto da promoção nas vendas')
-
 plt.show()
-
-  
 
 # Impacto de feriados
-
 sns.boxplot(x='feriado_nacional', y='vendas', data=df)
-
 plt.title('Impacto de feriado nas vendas')
-
 plt.show()
+.
+.
+.
   ````
 
 ### 3.2. Preparação e Limpeza dos Dados
@@ -100,48 +80,26 @@ plt.show()
 ````python 
 from prophet import Prophet
 
-  
-
 # Preparar dados
-
 prophet_df = df[['data','vendas']].rename(columns={'data':'ds', 'vendas':'y'})
-
   
-
 # Adicionar feriados e promoções
-
 from prophet.make_holidays import make_holidays_df
 
 # Para simplificação, consideramos apenas feriados nacionais conhecidos
-
 feriados = df[df['feriado_nacional']==True][['data']].rename(columns={'data':'ds'})
-
 feriados['holiday'] = 'feriado_nacional'
-
-  
-
 m = Prophet(holidays=feriados, weekly_seasonality=True, daily_seasonality=False)
-
 m.add_regressor('em_promocao')
-
 m.fit(prophet_df.assign(em_promocao=df['em_promocao']))
 
-  
-
 # Forecast 14 dias
-
 future = m.make_future_dataframe(periods=14)
-
 future['em_promocao'] = 0 # Exemplo sem promoções futuras
-
 forecast = m.predict(future)
 
-  
-
 # Plotar previsões
-
 m.plot(forecast)
-
 plt.show()
 ````
 ### 3.3. Modelagem e Treinamento
