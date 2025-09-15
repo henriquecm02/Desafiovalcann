@@ -1,4 +1,55 @@
-# Arquitetura de Forecast - Produto Alfa
+# Solução Pergunta 1 - Implementação de IA em Loja de Varejo
+## 1.1. Ajudando a convencer Adriana
+Fernanda deve convencer Adriana trazendo a discussão para o que mais importa em negócios: resultados concretos. Em vez de apresentar a Inteligência Artificial como uma novidade técnica, ela deve enquadrá-la como um conjunto de ferramentas práticas já usadas por grandes empresas do varejo, capazes de aumentar receita, reduzir desperdícios e fortalecer a marca.
+
+O primeiro ponto é a experiência do cliente. Empresas que oferecem personalização conseguem ampliar significativamente sua receita. A consultoria McKinsey mostra que negócios que utilizam estratégias personalizadas de atendimento e recomendação chegam a crescer até 40% mais do que concorrentes que não fazem isso. No varejo de roupas, isso pode ser visto quando um cliente compra uma calça jeans e recebe sugestões automáticas de peças que combinam, como jaquetas ou sapatos. O resultado é mais satisfação, fidelização e aumento do ticket médio.
+
+Outro aspecto decisivo é a otimização de estoque e logística. Muitas lojas enfrentam perdas por excesso de produtos parados ou falta de itens de maior procura. A IBM destaca que soluções de previsão podem reduzir os custos de armazenagem em até 30%. Na prática, isso significa que, se uma loja costuma estocar 1.000 unidades de um vestido e só vende 700, pode ajustar esse número e evitar prejuízos. Assim, sobra mais capital para investir em coleções ou campanhas sazonais.
+
+O marketing direcionado também é um diferencial claro. Em vez de campanhas genéricas que atingem todos os clientes, é possível criar ações segmentadas que falam diretamente com perfis específicos. Um estudo da Deloitte aponta que essa prática pode aumentar em até 25% as taxas de conversão. Por exemplo, em vez de mandar uma promoção para 10 mil clientes, a empresa pode focar em 3 mil que realmente têm maior chance de compra, economizando verba e aumentando resultados.
+
+Por fim, Fernanda pode destacar a redução de custos operacionais. O uso de automação em tarefas simples, como respostas sobre prazos de entrega ou políticas de troca, já gera impacto mensurável. Relatórios internacionais mostram que assistentes virtuais no varejo chegam a economizar bilhões anualmente, justamente porque liberam a equipe para atividades de maior valor, como estratégias de expansão e relacionamento próximo com clientes.
+
+Ao apresentar dessa forma, Fernanda não fala de “tecnologia por tecnologia”, mas mostra à Adriana um raciocínio direto: personalização aumenta vendas, previsão de demanda reduz perdas, marketing direcionado melhora conversão e automação diminui custos. É a tradução de inovação em ganho real, sustentada por dados e exemplos de mercado.
+
+## 1.2. Como implementar a adoção de IA na empresa
+
+Convencida dos benefícios, Adriana precisará de um plano prático para começar. A introdução da IA deve ser gradual, estruturada e conectada aos problemas reais do negócio.
+
+### Etapa 1: Identificação de Oportunidades
+
+O primeiro passo é mapear os principais desafios da loja: alto custo com estoque parado, campanhas de marketing pouco efetivas, atendimento demorado, entre outros. Esses problemas serão a base para escolher o uso inicial da IA.
+
+### Etapa 2: Projeto Piloto
+
+Fernanda deve propor um piloto de baixo custo e impacto direto nos resultados. Por exemplo, desenvolver um modelo de previsão de vendas para uma categoria de roupas específica. Essa fase funciona como um teste, mostrando rapidamente se a solução agrega valor.
+
+### Etapa 3: Uso de Ferramentas Acessíveis
+
+Para reduzir complexidade, é possível adotar plataformas já consolidadas que oferecem IA de forma acessível. Exemplos incluem Power BI com recursos de machine learning, Google AutoML ou Azure Cognitive Services. Isso acelera a entrega e reduz a necessidade de grandes investimentos iniciais.
+
+### Etapa 4: Validação e Métricas
+
+Os resultados devem ser avaliados com métricas claras: redução de estoque parado, aumento nas vendas, melhoria no tempo de atendimento. Esses indicadores mostrarão à gerência se o projeto cumpre os objetivos.
+
+### Etapa 5: Expansão Gradual
+
+Uma vez comprovado o valor no piloto, a IA pode ser expandida para outras áreas: marketing personalizado, atendimento automatizado e análise de tendências de moda. O processo de expansão deve ser planejado, garantindo que cada etapa tenha impacto comprovado.
+
+### Etapa 6: Cultura Orientada a Dados
+
+A adoção da IA não se resume a tecnologia. É fundamental investir em capacitação da equipe e estimular o uso de dados em decisões de negócio. Dessa forma, a empresa se torna mais ágil e competitiva no longo prazo.
+
+```mermaid
+
+flowchart TD;
+    A[1. Identificação de Oportunidades] --> B[2. Projeto Piloto]
+    B --> C[3. Uso de Ferramentas Acessíveis]
+    C --> D[4. Validação e Métricas]
+    D --> E[5. Expansão Gradual]
+    E --> F[6. Cultura Orientada a Dados]
+```
+# Solução Pergunta 2 - Arquitetura de Forecast  Produto Alfa
 
 ## 1. Contexto do Problema
 
@@ -19,6 +70,8 @@ A empresa **Logística Eficiente S.A.** precisa otimizar sua gestão de estoque 
 
 ### 3.1. Análise Exploratória de Dados (EDA)
 
+Etapa onde ocorre exploração, compreensão e resumo das principais características do conjunto de dados,
+de forma visual e estatística, sem ainda aplicar modelos preditivos complexos.
 -   **Passos:**
     
       1.  Inspeção de valores ausentes, outliers e inconsistências.
@@ -65,6 +118,9 @@ plt.show()
 
 ### 3.2. Preparação e Limpeza dos Dados
 
+Fase que garante que os dados estejam confiáveis, consistentes e prontos para análises estatísticas 
+para treinar modelos de machine learning.
+- **Passos:**
 -   Conversão de datas para formato `datetime`.
     
 -   Criação de features adicionais:
@@ -103,6 +159,8 @@ m.plot(forecast)
 plt.show()
 ````
 ### 3.3. Modelagem e Treinamento
+É a fase em que aplicamos modelos estatísticos ou de aprendizado de máquina aos dados já tratados,
+com o objetivo de aprender padrões e gerar previsões/insights.
 
 -   **Modelos candidatos:**
     
@@ -209,7 +267,7 @@ graph TD;
 
 ```
 
-## 5. Benefícios da Arquitetura
+## 5. Benefícios da Arquitetura Proposta
 
 -   **Escalabilidade:** uso de recursos elásticos da nuvem.
     
@@ -220,7 +278,7 @@ graph TD;
 -   **Integração com Negócio:** previsões diárias acessíveis via API.
     
 
-## 6. Próximos Passos
+## 6. Passos Seguintes 
 
 -   Criar POC com Prophet e avaliar contra ARIMA e XGBoost.
     
@@ -230,3 +288,124 @@ graph TD;
     
 -   Treinar a equipe de operações para consumir as previsões via dashboard (Power BI/Tableau ou QuickSight).
     
+
+
+
+# Solução Pergunta 3 - Sistema de Consulta de Marés
+
+##  Descrição do Problema
+
+Marcelo, surfista em Itapuama, precisa verificar o nível da maré antes de praticar surf. O processo atual é manual: ele busca em vários sites até encontrar a informação, o que é **lento e pouco prático**.
+
+Além disso, Marcelo gostaria de ter acesso a informações de marés não só em Itapuama, mas também em **outras praias do Brasil**.
+
+
+
+##  Objetivo da Solução
+
+Criar uma aplicação simples que seja simples e eficaz, buscando sempre o maior desempenho com o mínimo possivel de custos e complexidades desnecessárias.
+A aplicação seguirá  esses pilares fundamentais:
+
+1. **Automatizar a consulta do nível da maré**.
+2. **Centralizar as informações em um só lugar**.
+3. **Fornecer previsões atualizadas em tempo real**.
+4. **Ser escalável**, permitindo incluir novas praias facilmente.
+
+
+##  Escopo da Solução
+
+A aplicação foi pensada para seguir  quatro etapas principais que facilitarão o projeto:
+
+### 1. Coleta de Dados
+Esta etapa será responsável por manter o banco de dados abstecido com os dados das marés em tempo real, para isso serão usadas APIs de informações oficiais emitidas por orgãos que monitoram esse tipo de evento, além do uso de Web Scraping para procurar informações em sites confiáveis.
+* Consulta a **APIs públicas ou oficiais** (como a Marinha do Brasil).
+* Quando não houver API, utiliza-se **web scraping** para extrair os dados de sites confiáveis.
+
+### 2. Processamento
+Esta etapa será responsavel por processar os dados que virão da etapa de coleta, afim de padroniza-los e deixa- los pronto para armazenamento e utilização.
+* Os dados podem vir em diferentes formatos.
+* Essa etapa organiza e padroniza tudo em um formato único (por exemplo: JSON).
+
+### 3. Armazenamento
+Etapa responsável pelo armazanamento das informações coletadas e processadas em um banco de dados na nuvem.
+* Banco de dados (PostgreSQL ou MongoDB) guarda os registros de maré.
+* Cache (Redis) pode ser usado para **consultas rápidas em praias favoritas**.
+
+### 4. Exibição para o Usuário
+Camada de interface com usuário usada para fazer exibição das informações das marés de forma acessível e de facíl entendimento.
+* **Backend (API REST)** feito em Python com FastAPI ou Flask.
+* **Interface Web/Mobile** simples onde Marcelo pode:
+
+  * Buscar pelo nome da praia.
+  * Ver o nível atual da maré.
+  * Consultar um gráfico com previsão de alta/baixa maré.
+  * Salvar praias favoritas.
+
+---
+
+##  Fluxo Resumido
+
+```mermaid
+flowchart TD
+    A[Usuário abre o app] --> B[Interface Web/Mobile]
+    B --> C[API Backend]
+    C --> D[Banco de Dados]
+    C --> E[Cache de consultas]
+    D --> F[Fontes externas: API / Scraping]
+    F --> D
+    C --> B
+    B --> G[Exibe maré atual e previsão]
+```
+
+---
+
+##  Exemplo de Código (Consulta Simples)
+
+```python
+import requests
+
+def obter_mare(praia: str):
+    url = f"https://api.exemplo.com/mare?praia={praia}"
+    resposta = requests.get(url)
+    
+    if resposta.status_code == 200:
+        dados = resposta.json()
+        return {
+            "praia": praia,
+            "nivel_mare": dados["nivel"],
+            "hora": dados["hora"]
+        }
+    
+    return {"erro": "Não foi possível obter os dados"}
+
+print(obter_mare("Itapuama"))
+```
+
+Esse trecho representa a lógica de buscar a maré de uma praia.
+Em um sistema real, esse código seria integrado a um backend e conectado ao frontend.
+
+---
+
+##  Exemplo de Interface
+
+Quando Marcelo consulta Itapuama, o sistema retorna algo como:
+
+```
+ Praia: Itapuama  
+ Nível da maré: 1.8m  
+ Atualizado em: 14/09/2025 - 09:30  
+
+[Gráfico: variação da maré nas próximas 12h]
+```
+
+---
+
+##  Benefícios da Solução Proposta 
+
+* **Centralização**: todas as informações em um único lugar.
+* **Agilidade**: elimina a necessidade de buscas manuais.
+* **Escalabilidade**: pode ser facilmente expandido para novas praias.
+* **Usabilidade**: interface simples e clara.
+
+
+
